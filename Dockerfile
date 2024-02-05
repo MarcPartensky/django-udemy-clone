@@ -51,6 +51,7 @@ ENV PORT 80
 ENV HOST 0.0.0.0
 ENV PATH="${PATH}:/home/website/.local/bin"
 ENV PRODUCTION false
+ENV NOSETUP true
 EXPOSE 80
 
 # Check health
