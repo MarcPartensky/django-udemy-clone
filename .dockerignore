@@ -18,4 +18,3 @@ venv
 .travis.yml
 .gitignore
 .dockerignore
-requirements.txt
