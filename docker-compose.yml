@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  udemy:
+    image: marcpartensky/udemy
+    restart: unless-stopped
+      # env_file:
+      #   - ../data/secrets/website.env
+      # networks:
+      #   - caddy
+      #   - postgres
+      #   - redis
+    build: .
+    ports:
+      - 8000:80
+        # labels:
+        #   traefik.enable: "true"
+        #   traefik.http.routers.website.rule: Host(`marcpartensky.com`)
+        #   traefik.http.routers.website.entrypoints: web
+        #   traefik.http.services.website.loadbalancer.server.port: 80
