@@ -26,6 +26,7 @@ USER website
 WORKDIR /home/website
 # COPY --chown=website --from=builder /opt/website/requirements.txt ./
 COPY --chown=website requirements.txt ./
+COPY --chown=website manage.py ./
 # COPY LICENSE ./
 
 # No .pyo and easier debugging
