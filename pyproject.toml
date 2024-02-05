@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "django-udemy-clone"
+version = "0.1.0"
+description = ""
+authors = ["Marc Partensky <marc.partensky@gmail.com>"]
+readme = "README.md"
+packages = [{include = "django_udemy_clone"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+appdirs = "*"
+asgiref = "*"
+cachecontrol = "*"
+certifi = "*"
+chardet = "*"
+colorama = "*"
+contextlib2 = "*"
+distlib = "*"
+distro = "*"
+django = "3.1.4"
+html5lib = "*"
+idna = "*"
+ipaddr = "*"
+lockfile = "*"
+msgpack = "*"
+packaging = "*"
+pep517 = "*"
+requests = "*"
+pillow = "*"
+progress = "*"
+pyparsing = "*"
+pytoml = "*"
+pytz = "*"
+retrying = "*"
+six = "*"
+sqlparse = "*"
+urllib3 = "*"
+webencodings = "*"
+whitenoise = "*"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
