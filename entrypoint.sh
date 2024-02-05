@@ -37,7 +37,7 @@ fi
 
 # dev vs prod
 if [ -z $PRODUCTION ]; then
-    daphne django_project.asgi:application --port $port --bind $host -v2
+    daphne udemy.asgi:application --port $port --bind $host -v2
 else
     $src/manage.py runserver 127.0.0.1:8000
 fi
