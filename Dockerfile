@@ -24,7 +24,6 @@ USER website
 
 # Copy useful files
 WORKDIR /home/website
-COPY --chown=website . ./website
 # COPY --chown=website --from=builder /opt/website/requirements.txt ./
 COPY --chown=website requirements.txt ./
 # COPY LICENSE ./
@@ -36,6 +35,9 @@ ENV PYTHONUNBUFFERED 1
 # Install dependencies
 # RUN pip install -U pip
 RUN pip install -r requirements.txt
+
+COPY --chown=website . .
+
 RUN ./website/manage.py makemigrations
 RUN ./website/manage.py collectstatic --noinput
 
