@@ -38,8 +38,8 @@ RUN pip install -r requirements.txt
 
 COPY --chown=website . .
 
-RUN ./website/manage.py makemigrations
-RUN ./website/manage.py collectstatic --noinput
+RUN ./manage.py makemigrations
+RUN ./manage.py collectstatic --noinput
 
 USER root
 RUN apk del .tmp
