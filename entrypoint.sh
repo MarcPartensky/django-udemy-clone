@@ -21,12 +21,14 @@ fi
 
 echo $$ > /tmp/website.pid
 
+rm db.sqlite3
+
 echo -e "Running \033[1mentrypoint.sh\033[0m using $HOST:$PORT"
 $src/manage.py migrate
 
 setup() {
-    echo -e "Creating \033[1msuper user\033[0m using:\n - username: \033[1m$username\033[0m\n - email: \033[1m$email\033[0m\n"
-    $src/manage.py createsuperuser --user $username --email $email --noinput
+    echo -e "Creating \033[1msuper user\033[0m using:\n - username: \033[1m$username\033[0m\n - email: \033[1m$email\033[0m\n - password: $DJANGO_SUPERUSER_PASSWORD"
+    $src/manage.py createsuperuser --email $email --noinput
 }
 
 if [[ $NOSETUP == "true" ]] || [[ "$1" == "--nosetup" ]]; then
@@ -39,5 +41,5 @@ fi
 if [ -z $PRODUCTION ]; then
     daphne udemy.asgi:application --port $port --bind $host -v2
 else
-    $src/manage.py runserver 127.0.0.1:8000
+    $src/manage.py runserver $host:$port
 fi
