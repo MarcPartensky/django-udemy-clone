@@ -2,8 +2,8 @@
 
 src=.
 
-port=${1:-$PORT}
-host=${2:-$HOST}
+port=$PORT
+host=$HOST
 port=${port:-"80"}
 host=${addr:-"0.0.0.0"}
 username=${DJANGO_SUPERUSER_USERNAME:-"admin"}
