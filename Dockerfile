@@ -60,7 +60,7 @@ HEALTHCHECK --interval=30s \
             --timeout=10s \
             --start-period=1m \
             --retries=3 \
-             CMD curl -sSf http://localhost:$PORT/admin || exit 1
+             CMD curl -sSf http://localhost:$PORT/health || exit 1
 
 WORKDIR /home/website
 ENTRYPOINT ["./entrypoint.sh"]
