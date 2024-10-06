@@ -19,3 +19,15 @@ Used Tech Stack
 <img src="screenshots/three.png" height="800">
 
 Show your support by 🌟 the project!!
+
+### Environment variables
+
+```sh
+DB_NAME=udemy
+DB_HOST=postgres
+DB_PORT=5432
+DB_USER=user
+DB_PASSWORD=password
+DEBUG=True
+SECRET_KEY=asecretkeythatshouldntbepublic
+```
