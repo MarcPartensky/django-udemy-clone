@@ -4,7 +4,7 @@ src=.
 
 port=$PORT
 host=$HOST
-port=${port:-"80"}
+port=${port:-"8000"}
 host=${addr:-"0.0.0.0"}
 username=${DJANGO_SUPERUSER_USERNAME:-"admin"}
 email=${DJANGO_SUPERUSER_EMAIL:-"admin@admin.com"}
