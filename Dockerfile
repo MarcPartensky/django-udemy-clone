@@ -38,7 +38,7 @@ ENV PYTHONUNBUFFERED 1
 RUN pip install -r requirements.txt
 
 COPY --chown=website . .
-
+RUN echo "DEBUG=True" > .env
 RUN ./manage.py makemigrations
 RUN ./manage.py collectstatic --noinput
 

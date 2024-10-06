@@ -30,4 +30,5 @@ DB_USER=user
 DB_PASSWORD=password
 DEBUG=True
 SECRET_KEY=asecretkeythatshouldntbepublic
+ALLOWED_HOSTS=*
 ```

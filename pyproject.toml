@@ -38,6 +38,7 @@ urllib3 = "*"
 webencodings = "*"
 whitenoise = "*"
 daphne = "^4.0.0"
+python-dotenv = "^1.0.1"
 
 
 [build-system]

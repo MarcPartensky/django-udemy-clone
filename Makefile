@@ -5,7 +5,7 @@ PRODUCTION=false
 .PHONY: start list build push update
 
 start:
-	HOST=0.0.0.0 PORT=80 poetry run ./entrypoint.sh --nosetup
+	HOST=0.0.0.0 PORT=8000 poetry run ./entrypoint.sh --nosetup
 list:
 	@LC_ALL=C $(MAKE) -pRrq -f $(lastword $(MAKEFILE_LIST)) : 2>/dev/null | awk -v RS= -F: '/^# File/,/^# Finished Make data base/ {if ($$1 !~ "^[#.]") {print $$1}}' | sort | egrep -v -e '^[^[:alnum:]]' -e '^$@$$'
 build:
