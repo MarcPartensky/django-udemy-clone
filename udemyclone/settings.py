@@ -91,6 +91,7 @@ else:
             "PORT": os.environ["DB_PORT"],  # Port par défaut pour PostgreSQL
         }
     }
+print(f"DATABASES: {DATABASES}")
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
