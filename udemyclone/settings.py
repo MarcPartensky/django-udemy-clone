@@ -14,7 +14,9 @@ SECRET_KEY = os.environ["SECRET_KEY"]
 # SECRET_KEY = '83e21k1f8kjn1a2=$x5i=7$=x0@!_c$54xxu^^n(u)3j_js-(k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = bool(os.environ["DEBUG"])
+DEBUG = os.environ["DEBUG"] != "False"
+print(f"DEBUG: {DEBUG}")
+
 
 # Application definition
 
