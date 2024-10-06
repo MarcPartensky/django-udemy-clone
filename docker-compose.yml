@@ -4,8 +4,8 @@ services:
   udemy:
     image: marcpartensky/udemy
     restart: unless-stopped
-      # env_file:
-      #   - ../data/secrets/website.env
+    env_file:
+      - .env
       # networks:
       #   - caddy
       #   - postgres
